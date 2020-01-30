@@ -23,6 +23,7 @@ h2 {
     position: relative;
     max-width: 800px; /* Maximum width */
     padding-top: 25px;
+    margin: 0 auto;
 }
 
 .textContainer .content {
