@@ -1,6 +1,6 @@
 body {
     background-color: darkgrey;
-    background-image: url(library.jpg);
+    background-image: url(images/library.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -8,8 +8,8 @@ body {
 h1 {
     margin: auto;
     text-align: center;
-    padding-bottom: 25px;
-    padding-top: 25px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: gold;
 }
@@ -19,15 +19,21 @@ h2 {
     color: white;
 }
 
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
 .textContainer {
     position: relative;
     max-width: 800px; /* Maximum width */
-    padding-top: 25px;
+    padding-top: 5px;
     margin: 0 auto;
 }
 
 .textContainer .content {
-    background: rgba(3.0, 3.0, 3.0, 0.4);
+    background: rgba(3.0, 3.0, 3.0, 0.5);
+    border-radius: 50px;
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
@@ -49,10 +55,21 @@ canvas {
 }
 
 button {
+    /*
     margin-left: auto;
     margin-right: auto;
+    */
     display: block;
-    position: relative;
+    position: absolute;
+    bottom: 30%;
+}
+
+.rightButton {
+    right: 15%;
+}
+
+.leftButton {
+    left: 15%;
 }
 
 p {
@@ -62,4 +79,23 @@ p {
 
 a {
     color: lightblue;
+}
+
+.sidebar {
+    position: absolute;
+    max-width: 200px; /* Maximum width */
+    padding-top: 5px;
+    top: 100%;
+}
+
+.sidebar .content {
+    position: absolute;
+    background: rgba(3.0, 3.0, 3.0, 0.5);
+    border-radius: 50px;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    bottom: 25px;
+    width: 200px;
+    height: 500px;
 }
