@@ -1,6 +1,6 @@
 body {
     background-color: darkgrey;
-    background-image: url(https://www.mapio.net/images-p/52328064.jpg);
+    background-image: url(library.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -33,6 +33,14 @@ h2 {
     padding: 20px;
 }
 
+.textContainer .content .center {
+    display: block;
+    border: 2px solid blue;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 canvas {
     margin-left: auto;
     margin-right: auto;
@@ -44,9 +52,14 @@ button {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    position: relative;
 }
 
 p {
     color: white;
     text-align: center;
+}
+
+a {
+    color: lightblue;
 }
