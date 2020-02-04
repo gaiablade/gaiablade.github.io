@@ -1,7 +1,8 @@
 body {
     background-color: darkgrey;
-    background-image: url(images/library.jpg);
+    /*background-image: url(images/train_station.jpg);*/
     background-repeat: no-repeat;
+    background-position: top left;
     background-size: cover;
 }
 
@@ -24,14 +25,19 @@ h3 {
     color: white;
 }
 
-.textContainer {
+.main {
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+
+.main .textContainer {
     position: relative;
     max-width: 800px; /* Maximum width */
     padding-top: 5px;
     margin: 0 auto;
 }
 
-.textContainer .content {
+.main .textContainer .content {
     background: rgba(3.0, 3.0, 3.0, 0.5);
     border-radius: 50px;
     color: #f1f1f1;
@@ -39,7 +45,7 @@ h3 {
     padding: 20px;
 }
 
-.textContainer .content .center {
+.main .textContainer .content .center {
     display: block;
     border: 2px solid blue;
     margin-left: auto;
@@ -54,48 +60,58 @@ canvas {
     padding-bottom: 25px;
 }
 
-button {
-    /*
-    margin-left: auto;
-    margin-right: auto;
-    */
+.main button {
     display: block;
     position: absolute;
     bottom: 30%;
 }
 
-.rightButton {
+.main .rightButton {
     right: 15%;
 }
 
-.leftButton {
+.main .leftButton {
     left: 15%;
 }
 
-p {
+.main p {
     color: white;
     text-align: center;
 }
 
-a {
+.main a {
     color: lightblue;
 }
 
-.sidebar {
-    position: absolute;
-    max-width: 200px; /* Maximum width */
-    padding-top: 5px;
-    top: 100%;
+.sidenav {
+    height: 99%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0; 
+    background-color: rgba(0.0, 0.0, 0.0, 0.8); /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    border-radius: 25px;
 }
 
-.sidebar .content {
-    position: absolute;
-    background: rgba(3.0, 3.0, 3.0, 0.5);
-    border-radius: 50px;
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
     color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
-    bottom: 25px;
-    width: 200px;
-    height: 500px;
+}
+
+.sidenav button {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    margin-bottom: 50px;
+    margin-left: 30px;
 }
