@@ -1,37 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="styles2.css">
+        <link rel="stylesheet" href="styles_index.css">
         <title>My website</title>
-
     </head>
     <body id='Body' style="background-image:url(images/maku_tree.gif)">
         <script src="backgroundChange.js"></script>
         <script src="scrollIntoView.js"></script>
         <div class="sidenav">
             <a>About</a>
-            <a>Projects</a>
+            <a onclick="scrollToElementCSG('projects')">Projects</a>
             <a>Contact</a>
             <a onclick="scrollToElementCSG('GGJ2020')">GGJ2020</a>
             <button onclick='advanceImage()'>&#10095;</button>
         </div>
         <div class="main">
             <h1>Welcome to my page!</h1>
-            <div class="textContainer">
-                <div class="content">
-                    <h2 style="text-align:center">Pictures</h2>
-                    <div class="slideshowContainer">
-                        <img src="images/link.png" style="width:250px;height:250px" class="center" id='linkimage'>
-                        <img src="images/tetris.png" style="width:250px;height:250px" class="center" id='linkimage'>
-                        <img src="images/code1.png" style="width:250px;height:250px" class="center" id='linkimage'>
-                        <img src="images/ascii-ifer.png" style="width:250px;height:250px" class="center" id='linkimage'>
-                        <script src='showImage.js'></script>
-                        <button class="leftButton" onclick="plusImage(-1)">&#10094;</button>
-                        <button class="rightButton" onclick="plusImage(1)">&#10095;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="textContainer">
+            <div class="textContainer" id="projects">
                 <div class="content">
                     <h2 style="text-align:center">My projects</h2>
                     <p><a href="http://www.github.com/gaiablade/reimagined-enigma/releases/">reimagined-enigma</a>: A Tetris clone made in C++ and SFML.</p>
@@ -40,12 +25,6 @@
                     <p><a href="https://github.com/gaiablade/ascii-ifier">ascii-ifier</a>: .BMP to ASCII-Art terminal program.</p>
                     <p><a href="https://github.com/gaiablade/minesweeper/">minesweeper</a>: Minesweeper clone made in C++ and SFML.</p>
                     <p><a href="https://github.com/gaiablade/gaiablade.github.io/">gaiablade.github.io</a>: This webpage!</p>
-                </div>
-            </div>
-            <div class="textContainer">
-                <div class="content">
-                    <h2 style="text-align:center">Misc.</h2>
-                    <p> Be happy! <a href="test.html">Have a smiley face :)</a></p>
                 </div>
             </div>
             <div class="textContainer" id="GGJ2020">
@@ -67,6 +46,27 @@
                     with Unity and the C# programming language, as well as
                     working under harsh time constraints.
                     </p>
+                </div>
+            </div>
+            <div class="textContainer">
+                <div class="content">
+                    <h2 style="text-align:center">Pictures</h2>
+                    <div class="slideshowContainer">
+                        <img src="images/link.png" style="width:250px;height:250px" class="center" id='linkimage'>
+                        <img src="images/tetris.png" style="width:250px;height:250px" class="center" id='linkimage'>
+                        <img src="images/code1.png" style="width:250px;height:250px" class="center" id='linkimage'>
+                        <img src="images/ascii-ifer.png" style="width:250px;height:250px" class="center" id='linkimage'>
+                        <p id="imageDesc">3D Model loaded using OpenGL</p>
+                        <script src='showImage.js'></script>
+                        <button class="leftButton" onclick="plusImage(-1)">&#10094;</button>
+                        <button class="rightButton" onclick="plusImage(1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="textContainer">
+                <div class="content">
+                    <h2 style="text-align:center">Misc.</h2>
+                    <p> Be happy! <a href="test.html">Have a smiley face :)</a></p>
                 </div>
             </div>
         </div>
