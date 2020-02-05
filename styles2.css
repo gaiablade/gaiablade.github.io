@@ -1,9 +1,9 @@
 body {
     background-color: darkgrey;
-    /*background-image: url(images/train_station.jpg);*/
     background-repeat: no-repeat;
     background-position: top left;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -38,7 +38,7 @@ h3 {
 }
 
 .main .textContainer .content {
-    background: rgba(3.0, 3.0, 3.0, 0.5);
+    background: rgba(3.0, 3.0, 3.0, 0.7);
     border-radius: 50px;
     color: #f1f1f1;
     width: 100%;
@@ -106,6 +106,7 @@ canvas {
 
 .sidenav a:hover {
     color: #f1f1f1;
+    cursor: pointer;
 }
 
 .sidenav button {
@@ -114,4 +115,14 @@ canvas {
     display: block;
     margin-bottom: 50px;
     margin-left: 30px;
+}
+
+.textContainer .content2 img {
+    width: 25%;
+    float: right;
+    display: inline;
+}
+
+.textContainer .content2 {
+    height: 410px;
 }
