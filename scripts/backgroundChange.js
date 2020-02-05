@@ -2,11 +2,11 @@ const images = ["url(\"images/maku_tree.gif\")", "url(\"images/library.jpg\")", 
 let currentBackground = images.findIndex((str) => { return str == document.getElementById('Body').style.backgroundImage; }); 
 
 function advanceImage() {
-    console.log(document.getElementById('Body').style.backgroundImage);
-    console.log(currentBackground);
-    currentBackground++;
-    if (currentBackground >= images.length) {
-        currentBackground = 0;
-    }
-    document.getElementById('Body').style.backgroundImage = images[currentBackground];
+  console.log(document.getElementById('Body').style.backgroundImage);
+  console.log(currentBackground);
+  currentBackground++;
+  if (currentBackground >= images.length) {
+    currentBackground = 0;
+  }
+  document.getElementById('Body').style.backgroundImage = images[currentBackground];
 }
