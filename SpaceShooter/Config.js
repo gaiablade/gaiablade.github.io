@@ -11,6 +11,7 @@ const Config = {
   width: canvas.width,
   height: canvas.height,
   playerSpeed: 250,
+  enemySpeed: 125,
   laserSpeed: 500,
   updateRate: {
     fps: 60,
@@ -18,6 +19,7 @@ const Config = {
   },
   runningId: 0,
   entities: [],
+  enemy_spawn_rate: 0.2,
   fire_delay: 0.2 // in ms
 };
 Config.updateRate.seconds = 1 / Config.updateRate.fps;

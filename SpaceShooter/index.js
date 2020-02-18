@@ -2,6 +2,8 @@
 const player = new Player();
 let l_Time = null;
 let lasers = [];
+let enemies = [];
+let enemy_spawner = new EnemySpawner();
 
 function createLaser(player) {
   lasers.push(new Laser(player));
@@ -19,15 +21,22 @@ function update(dt) {
   lasers.forEach((value) => {
     value.update(dt);
   })
+  enemy_spawner.update(dt);
+  enemies.forEach((value) => {
+    value.update(dt);
+  });
 }
 
 function draw(graphics) {
-  graphics.fillStyle = "#555555";
+  graphics.fillStyle = "#3f3073";
   graphics.fillRect(0, 0, Config.width, Config.height);
-  graphics.drawImage(i_ArrowKeys, 15, 8);
-  graphics.drawImage(i_ZKey, Config.width - i_ZKey.width - 12, 20);
   player.draw(graphics);
   lasers.forEach((value) => {
+    value.draw(graphics);
+  });
+  //graphics.drawImage(i_ArrowKeys, 15, 8);
+  //graphics.drawImage(i_ZKey, Config.width - i_ZKey.width - 12, 20);
+  enemies.forEach((value) => {
     value.draw(graphics);
   });
 }

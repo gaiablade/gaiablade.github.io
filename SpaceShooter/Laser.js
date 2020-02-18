@@ -6,6 +6,17 @@ class Laser {
   }
   update(dt) {
     this.position.y -= Math.ceil(Config.laserSpeed * dt);
+    // Check for collision with enemy:
+    enemies.forEach((value, index) => {
+      if (this.position.x >= value.position.x && this.position.x <= value.position.x + value.size.width) {
+        if (this.position.y >= value.position.y && this.position.y <= value.position.y + value.size.height) {
+          delete enemies[index];
+        }
+      }
+    });
+    if (this.position.y < 0) {
+      delete this;
+    }
   }
   draw(graphics) {
     graphics.fillStyle = "#1eff00";
