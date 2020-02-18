@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 	<head>
-		<title>CS316 - PA2</title>
-        <img src="images/arrow_keys.png" id="arrow_keys" style="display:none"
+        <meta charset="utf-8"></meta>
+		<title>Space Shooter</title>
+        <img src="images/arrow_keys_90x80.png" id="arrow_keys" style="display:none"
         width=90 height=80>
-        <img src="images/z_key.png" id="z_key" style="display:none"
+        <img src="images/z_key_45x50.png" id="z_key" style="display:none"
         width=45 height=50>
-        <img src="images/ship.png" id="ship" style="display:none" width=34
+        <img src="images/ship_34x37.png" id="ship" style="display:none" width=34
                                              height=37>
+        <img src="images/enemy_22x23.png" id="enemy" style="display:none"
+                                                     width=22 height=23>
 	</head>
 	<body>
 		<div id="game_wrapper">
@@ -16,8 +19,9 @@
 		</div>
 	</body>
     <script src="Config.js"></script>
+    <script src="InputHandler.js"></script>
+    <script src="Laser.js"></script>
     <script src="Entity.js"></script>
     <script src="Player.js"></script>
-    <script src="InputHandler.js"></script>
     <script src="index.js"></script>
 </html>

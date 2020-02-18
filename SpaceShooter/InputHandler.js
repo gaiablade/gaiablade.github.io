@@ -7,8 +7,7 @@ class InputHandler {
       40: { key: "down", state: "y_movement", mod: 1 }
     },
     actions: {
-      90: { key: "z", state: "fire_1"},
-      88: { key: "x", state: "fire_2"}
+      90: { key: "z", state: "fire"}
     }
   }
   constructor(player) {
@@ -21,6 +20,8 @@ class InputHandler {
       if (event.repeat) {
         return;
       }
+      const mapping = this.keyBindings.actions[event.keyCode];
+      this.player.actions[mapping.key].polled = true;
     }
     if (this.keyBindings.movement.hasOwnProperty(event.keyCode)) {
       this.player.keys[this.keyBindings.movement[event.keyCode].key].polled = true;
@@ -30,6 +31,10 @@ class InputHandler {
     if (this.keyBindings.movement.hasOwnProperty(event.keyCode)) {
       const mapping = this.keyBindings.movement[event.keyCode];
       this.player.keys[mapping.key].polled = false;
+    }
+    if (this.keyBindings.actions.hasOwnProperty(event.keyCode)) {
+      const mapping = this.keyBindings.actions[event.keyCode];
+      this.player.actions[mapping.key].polled = false;
     }
   }
   update(dt) {

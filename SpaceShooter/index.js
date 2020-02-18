@@ -1,7 +1,11 @@
 // Main Section
 const player = new Player();
-const game = new InputHandler(player);
 let l_Time = null;
+let lasers = [];
+
+function createLaser(player) {
+  lasers.push(new Laser(player));
+}
 
 function start() {
   Config.entities = [];
@@ -11,16 +15,21 @@ function start() {
 }
 
 function update(dt) {
-  game.update(dt);
+  player.update(dt);
+  lasers.forEach((value) => {
+    value.update(dt);
+  })
 }
 
 function draw(graphics) {
-  //graphics.fillStyle = '#FFFFFF';
   graphics.fillStyle = "#555555";
   graphics.fillRect(0, 0, Config.width, Config.height);
   graphics.drawImage(i_ArrowKeys, 15, 8);
   graphics.drawImage(i_ZKey, Config.width - i_ZKey.width - 12, 20);
   player.draw(graphics);
+  lasers.forEach((value) => {
+    value.draw(graphics);
+  });
 }
 
 function loop(c_Time) {
