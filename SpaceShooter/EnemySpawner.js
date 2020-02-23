@@ -1,12 +1,12 @@
 class EnemySpawner {
   constructor() {
-    this.since_spawn = Config.enemy_spawn_rate;
+    this.sinceSpawn = Config.enemySpawnRate;
   }
   update(dt) {
-    this.since_spawn += dt;
-    if (this.since_spawn >= Config.enemy_spawn_rate) {
+    this.sinceSpawn += dt;
+    if (this.sinceSpawn >= Config.enemySpawnRate) {
       this.spawnEnemy();
-      this.since_spawn = 0;
+      this.sinceSpawn = 0;
     }
   }
   spawnEnemy() {

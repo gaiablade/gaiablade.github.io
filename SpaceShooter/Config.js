@@ -8,7 +8,10 @@ const i_Ship = document.getElementById("ship");
 const i_Enemy = document.getElementById('enemy');
 
 const Config = {
-  width: canvas.width,
+  statBarDimensions: {
+    width: 100, height: canvas.height
+  },
+  //width: canvas.width - Config.statBarDimensions.width,
   height: canvas.height,
   playerSpeed: 250,
   enemySpeed: 125,
@@ -19,7 +22,8 @@ const Config = {
   },
   runningId: 0,
   entities: [],
-  enemy_spawn_rate: 0.2,
-  fire_delay: 0.2 // in ms
+  enemySpawnRate: 1.0,
+  fireDelay: 0.15 // in ms
 };
 Config.updateRate.seconds = 1 / Config.updateRate.fps;
+Config.width = canvas.width - Config.statBarDimensions.width;

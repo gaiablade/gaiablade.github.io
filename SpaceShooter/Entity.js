@@ -7,6 +7,4 @@ class Entity {
     this.id = Config.runningId++;
     Config.entities[this.id] = this;
   }
-  update(dt) {
-  }
 }
