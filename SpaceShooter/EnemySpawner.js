@@ -1,5 +1,6 @@
 class EnemySpawner {
-  constructor() {
+  constructor(gm) {
+    this.gm = gm;
     this.sinceSpawn = Config.enemySpawnRate;
   }
   update(dt) {
@@ -10,6 +11,6 @@ class EnemySpawner {
     }
   }
   spawnEnemy() {
-    enemies.push(new Enemy());
+    this.gm.enemies.push(new Enemy(this.gm));
   }
 }

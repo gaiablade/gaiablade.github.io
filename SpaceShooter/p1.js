@@ -1,14 +1,15 @@
 class Player extends Entity {
   // Key-Bindings:
   keys = {
-    left:  { key: "left",  polled: false, state: "x_movement", mod: -1 },
-    right: { key: "right", polled: false, state: "x_movement", mod:  1 },
-    up:    { key: "up",    polled: false, state: "y_movement", mod: -1 },
-    down:  { key: "down",  polled: false, state: "y_movement", mod:  1 },
-    z:     { key: "z",     polled: false, state: "fire",       mod:  1 },
-    x:     { key: "x",     polled: false, state: "bomb",       mod:  1 }
+    left: { key: "left", polled: false, state: "x_movement", mod: -1 },
+    right: { key: "right", polled: false, state: "x_movement", mod: 1 },
+    up: { key: "up", polled: false, state: "y_movement", mod: -1 },
+    down: { key: "down", polled: false, state: "y_movement", mod: 1 },
+  };
+  actions = {
+    z: { key: "z", polled: false, state: "fire", }
   }
-  polledActions = { x_movement: 0, y_movement: 0, fire: 0, bomb: 0 };
+  polledActions = { x_movement: 0, y_movement: 0, fire: false };
 
   // Dimensions:
   size = { width: 34, height: 37 };
@@ -24,15 +25,13 @@ class Player extends Entity {
   particles = [];
   sinceLastParticle = Config.particleInterval;
 
-  constructor(gm) {
+  constructor() {
     super();
-    this.gm = gm;
     this.position.x = Config.width / 2;
     this.position.y = Config.height - 100;
     this.input_handler = new InputHandler(this);
     this.lasers = [];
   }
-
   update(dt) {
     this.particles.forEach((value) => {
       value.update(dt);
@@ -43,51 +42,42 @@ class Player extends Entity {
     this.updateAttack();
     this.checkCollisions();
   }
-
   draw(graphics) {
+    graphics.drawImage(i_Ship, this.position.x, this.position.y);
     graphics.font = "17px Arial";
     graphics.fillStyle = '#000000';
     graphics.fillText(`HP: ${this.health}`, Config.width + 15, 50);
     this.particles.forEach((value) => {
       value.draw(graphics);
     });
-    graphics.drawImage(i_Ship, this.position.x, this.position.y);
   }
-
   fireLaser() {
-    this.gm.createLaser();
+    createLaser(this);
   }
-
   checkCollisions() {
-    this.gm.enemies.forEach((value, index) => {
+    enemies.forEach((value, index) => {
       if (this.position.x < value.position.x + value.size.width && this.position.x + this.size.width > value.position.x
       && this.position.y < value.position.y + value.size.height && this.position.y + this.size.height > value.position.y) {
         this.health -= 5;
-        delete this.gm.enemies[index];
+        delete enemies[index];
       }
     });
   }
-
   updateInput() {
     // Handle movement:
-    Object.values(this.keys).forEach((key, index) => {
-      if (key.polled) {
-        this.polledActions[key.state] += key.mod;
+    Object.entries(this.keys).forEach(([key, value]) => {
+      const mapping = this.keys[key];
+      if (mapping.polled) {
+        this.polledActions[mapping.state] += mapping.mod;
       }
     });
   }
-
   updateAttack() {
-    if (this.keys.z.polled && this.silentDuration >= Config.fireDelay) {
+    if (this.actions.z.polled && this.silentDuration >= Config.fireDelay) {
       this.silentDuration = 0;
       this.fireLaser();
     }
-    if (this.keys.x.polled) {
-      gm.bombScreen();
-      this.keys.x.polled = false;
-    }
   }
-
   updateMovement(dt) {
     this.sinceLastParticle += dt;
     this.velocity.x += Math.ceil(this.polledActions.x_movement * dt * Config.playerSpeed);

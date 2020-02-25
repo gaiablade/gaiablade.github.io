@@ -9,7 +9,7 @@ const i_Enemy = document.getElementById('enemy');
 
 const Config = {
   statBarDimensions: {
-    width: 100, height: canvas.height
+    width: 150, height: canvas.height
   },
   //width: canvas.width - Config.statBarDimensions.width,
   height: canvas.height,
@@ -22,8 +22,9 @@ const Config = {
   },
   runningId: 0,
   entities: [],
-  enemySpawnRate: 1.0,
-  fireDelay: 0.15 // in ms
+  enemySpawnRate: 0.5,
+  fireDelay: 0.15, // in ms
+  particleInterval: 0.5
 };
 Config.updateRate.seconds = 1 / Config.updateRate.fps;
 Config.width = canvas.width - Config.statBarDimensions.width;

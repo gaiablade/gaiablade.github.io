@@ -2,6 +2,7 @@ class Laser {
   position = null;
   size = {x: 4, y: 10};
   constructor(player) {
+    this.gm = player.gm;
     this.position = {x: player.position.x + (player.size.width / 2), y: player.position.y};
   }
   update(dt) {
@@ -20,11 +21,11 @@ class Laser {
   }
   checkCollision() {
     // Check for collision with enemy:
-    enemies.forEach((value, index) => {
+    this.gm.enemies.forEach((value, index) => {
       if (this.position.x >= value.position.x && this.position.x <= value.position.x + value.size.width) {
         if (this.position.y >= value.position.y && this.position.y <= value.position.y + value.size.height) {
-          delete enemies[index];
-          num_kills++;
+          delete this.gm.enemies[index];
+          this.gm.numKills++;
         }
       }
     });
