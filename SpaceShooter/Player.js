@@ -23,6 +23,9 @@ class Player extends Entity {
   particles = [];
   sinceLastParticle = Config.particleInterval;
 
+  // Bombs:
+  numBombs = 3;
+
   constructor(gm) {
     super();
     this.gm = gm;
@@ -77,8 +80,9 @@ class Player extends Entity {
       this.silentDuration = 0;
       this.fireLaser();
     }
-    if (this.keys.x.polled) {
+    if (this.keys.x.polled && this.numBombs > 0) {
       gm.bombScreen();
+      this.numBombs--;
       this.keys.x.polled = false;
     }
   }
@@ -87,6 +91,10 @@ class Player extends Entity {
     this.sinceLastParticle += dt;
     this.velocity.x += Math.ceil(this.polledActions.x_movement * dt * Config.playerSpeed);
     this.velocity.y += Math.ceil(this.polledActions.y_movement * dt * Config.playerSpeed);
+    if (this.polledActions.x_movement != 0 && this.polledActions.y_movement != 0) {
+      this.velocity.x /= Math.sqrt(2);
+      this.velocity.y /= Math.sqrt(2);
+    }
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
 

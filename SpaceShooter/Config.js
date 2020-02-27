@@ -43,3 +43,14 @@ const Config = {
 };
 Config.updateRate.seconds = 1 / Config.updateRate.fps;
 Config.width = canvas.width - Config.statBarDimensions.width;
+
+const fsExplosionParameters = new AnimationParameters(i_Explosion,
+  [new AnimationTextureCoord(0.04, 0, 0),
+    new AnimationTextureCoord(0.04, 64, 0),
+    new AnimationTextureCoord(0.04, 128, 0),
+    new AnimationTextureCoord(0.04, 128 + 64, 0),
+    new AnimationTextureCoord(0.04, 0, 64),
+    new AnimationTextureCoord(0.04, 64, 64),
+    new AnimationTextureCoord(0.04, 128, 64),
+    new AnimationTextureCoord(0.04, 128 + 64, 64),
+  ], 64, 64);

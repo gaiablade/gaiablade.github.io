@@ -65,17 +65,17 @@ class GameManager {
 
   draw(graphics) {
     // Draw player, enemies, particles, and lasers:
+    this.animations.forEach((animation) => {
+      if (!animation.finished) {
+        animation.draw(graphics);
+      }
+    })
     this.player.draw(graphics);
     this.enemies.forEach((enemy) => {
       enemy.draw(graphics);
     });
     this.lasers.forEach((laser) => {
       laser.draw(graphics);
-    })
-    this.animations.forEach((animation) => {
-      if (!animation.finished) {
-        animation.draw(graphics);
-      }
     })
 
     // Clear the stat bar on the right:
@@ -93,6 +93,7 @@ class GameManager {
     graphics.fillText(`Time: ${this.str_Minutes}:${this.str_Seconds}`, Config.width + 15, 90);
     graphics.fillText(`Score: ${this.score}`, Config.width + 15, 110);
     graphics.fillText(`Enemies: ${this.enemies.length}`, Config.width + 15, 130);
+    graphics.fillText(`Bombs: ${this.player.numBombs}`, Config.width + 15, 150);
   }
 
   checkGameOver() {
@@ -103,6 +104,10 @@ class GameManager {
   }
 
   bombScreen() {
+    this.animations.push(new Animation(fsExplosionParameters, 0, Config.height / 2 - Config.width / 2, Config.width, Config.width));
+    this.enemies.forEach((enemy) => {
+      this.animations.push(new Animation(explosionParameters, enemy.position.x, enemy.position.y))
+    });
     this.enemies = [];
   }
 
@@ -118,6 +123,10 @@ class GameManager {
         this.enemies = [];
         this.score = 0;
         this.upFrames = 0;
+        this.numKills = 0;
+        this.animations = [];
+        this.enemies = [];
+        this.lasers = [];
       }
     }
   }
