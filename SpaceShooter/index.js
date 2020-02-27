@@ -38,7 +38,10 @@ function update(dt) {
 function draw(graphics) {
   // Clear playing field:
   graphics.fillStyle = "#3f3073";
+  graphics.clearRect(0, 0, Config.width, Config.height);
+  graphics.globalAlpha = 0.3;
   graphics.fillRect(0, 0, Config.width, Config.height);
+  graphics.globalAlpha = 1;
 
   gm.draw(graphics);
 
@@ -47,6 +50,9 @@ function draw(graphics) {
   graphics.drawImage(i_ArrowKeys, 15, 8);
   graphics.drawImage(i_ZKey, Config.width - i_ZKey.width - 12, 20);
   graphics.globalAlpha = 1.0;
+  if (gm.gameOver) {
+    graphics.drawImage(i_Retry, Config.width / 2 - i_Retry.width, Config.height / 2);
+  }
 }
 
 function loop(currentTime) {
@@ -61,7 +67,7 @@ function loop(currentTime) {
     deltaTime -= Config.updateRate.seconds;
     gm.lastTime = currentTime;
   }
-  if (!gm.gameOver) window.requestAnimationFrame(loop);
+  window.requestAnimationFrame(loop);
 }
 
 function clearFrame() {

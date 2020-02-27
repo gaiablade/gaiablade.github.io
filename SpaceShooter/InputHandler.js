@@ -9,6 +9,7 @@ class InputHandler {
   };
   constructor(player) {
     this.player = player;
+    this.gm = this.player.gm;
     window.addEventListener("keydown", (event) => this.keydown(event), false);
     window.addEventListener("keyup", (event) => this.keyup(event), false);
   }

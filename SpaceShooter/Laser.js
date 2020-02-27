@@ -24,6 +24,7 @@ class Laser {
     this.gm.enemies.forEach((value, index) => {
       if (this.position.x >= value.position.x && this.position.x <= value.position.x + value.size.width) {
         if (this.position.y >= value.position.y && this.position.y <= value.position.y + value.size.height) {
+          this.gm.animations.push(new Animation(explosionParameters, value.position.x, value.position.y))
           delete this.gm.enemies[index];
           this.gm.numKills++;
         }

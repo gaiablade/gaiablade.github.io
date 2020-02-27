@@ -6,7 +6,7 @@ class Player extends Entity {
     up:    { key: "up",    polled: false, state: "y_movement", mod: -1 },
     down:  { key: "down",  polled: false, state: "y_movement", mod:  1 },
     z:     { key: "z",     polled: false, state: "fire",       mod:  1 },
-    x:     { key: "x",     polled: false, state: "bomb",       mod:  1 }
+    x:     { key: "x",     polled: false, state: "bomb",       mod:  1 },
   }
   polledActions = { x_movement: 0, y_movement: 0, fire: 0, bomb: 0 };
 
@@ -17,7 +17,6 @@ class Player extends Entity {
   input_handler = null;
 
   // Lasers:
-  lasers = null;
   silentDuration = 100;
 
   // Particles:
@@ -30,7 +29,6 @@ class Player extends Entity {
     this.position.x = Config.width / 2;
     this.position.y = Config.height - 100;
     this.input_handler = new InputHandler(this);
-    this.lasers = [];
   }
 
   update(dt) {
@@ -45,9 +43,6 @@ class Player extends Entity {
   }
 
   draw(graphics) {
-    graphics.font = "17px Arial";
-    graphics.fillStyle = '#000000';
-    graphics.fillText(`HP: ${this.health}`, Config.width + 15, 50);
     this.particles.forEach((value) => {
       value.draw(graphics);
     });
