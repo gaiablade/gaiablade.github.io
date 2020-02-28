@@ -26,6 +26,9 @@ class Player extends Entity {
   // Bombs:
   numBombs = 3;
 
+  // Sprite:
+  sprite = i_Ship;
+
   constructor(gm) {
     super();
     this.gm = gm;
@@ -49,7 +52,7 @@ class Player extends Entity {
     this.particles.forEach((value) => {
       value.draw(graphics);
     });
-    graphics.drawImage(i_Ship, this.position.x, this.position.y);
+    graphics.drawImage(this.sprite, this.position.x, this.position.y);
   }
 
   fireLaser() {
@@ -120,5 +123,10 @@ class Player extends Entity {
     this.polledActions.y_movement = 0;
     this.velocity.x = 0;
     this.velocity.y = 0;
+  }
+
+  destroy() {
+    this.position.x = 999;
+    this.position.y = 999;
   }
 }

@@ -24,6 +24,9 @@ class GameManager {
 
   update(dt) {
     if (this.gameOver) {
+      this.animations.forEach((animation) => {
+        animation.update(dt);
+      });
       return;
     }
     // Update total number of frames that have passed:
@@ -46,11 +49,13 @@ class GameManager {
     this.lasers.forEach((laser) => {
       laser.update(dt);
     });
+    this.updateLasers();
 
     // Update Animations:
     this.animations.forEach((animation) => {
       animation.update(dt);
     });
+    this.updateAnimations();
 
     this.checkGameOver();
 
@@ -99,13 +104,32 @@ class GameManager {
   checkGameOver() {
     if (this.player.health <= 0) {
       // game lost
+      this.animations.push(new Animation(explosionParameters, this.player.position.x, this.player.position.y));
+      this.player.destroy();
       this.gameOver = true;
     }
+  }
+
+  updateLasers() {
+    this.lasers.forEach((laser, index) => {
+      if (laser.position.y <= 0 || laser.collided) {
+        this.lasers.splice(index, 1);
+      }
+    });
+  }
+
+  updateAnimations() {
+    this.animations.forEach((animation, index) => {
+      if (animation.finished) {
+        this.animations.splice(index, 1);
+      }
+    });
   }
 
   bombScreen() {
     this.animations.push(new Animation(fsExplosionParameters, 0, Config.height / 2 - Config.width / 2, Config.width, Config.width));
     this.enemies.forEach((enemy) => {
+      this.numKills++;
       this.animations.push(new Animation(explosionParameters, enemy.position.x, enemy.position.y))
     });
     this.enemies = [];

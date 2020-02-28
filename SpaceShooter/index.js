@@ -48,7 +48,8 @@ function draw(graphics) {
   // Draw controls
   graphics.globalAlpha = keyInstr.opacity;
   graphics.drawImage(i_ArrowKeys, 15, 8);
-  graphics.drawImage(i_ZKey, Config.width - i_ZKey.width - 12, 20);
+  graphics.drawImage(i_ZKey, Config.width - i_ZKey.width - 60, 20);
+  graphics.drawImage(i_XKey, Config.width - i_XKey.width - 12, 20);
   graphics.globalAlpha = 1.0;
   if (gm.gameOver) {
     graphics.drawImage(i_Retry, Config.width / 2 - i_Retry.width, Config.height / 2);
