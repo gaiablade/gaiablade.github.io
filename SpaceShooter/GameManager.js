@@ -1,20 +1,111 @@
+"use strict";
+
+/**
+ * GameManager class:
+ *      Functions as a container for variables and objects that are used by many
+ *      objects.
+ * @author Caleb Geyer
+ * @typedef GameManager
+*/
 class GameManager {
+  /**
+   * Game Over flag.
+   * @type {Boolean}
+  */
   gameOver = false;
+
+  /**
+   * Player character.
+   * @type {Player}
+  */
   player = null;
+
+  /**
+   * The last recorded time from the previous iteration of the main game loop.
+   * @type {Number}
+  */
   lastTime = null;
+
+  /**
+   * The array of lasers currently on the field.
+   * @type {Object}
+  */
   lasers = [];
+
+  /**
+   * The array of enemies on the field.
+   * @type {Object}
+  */
   enemies = [];
+
+  /**
+   * The field's enemy spawner.
+   * @type {EnemySpawner}
+  */
   enemySpawner = null;
+
+  /**
+   * Number of enemies that have been destroyed.
+   * @type {Number}
+  */
   numKills = 0;
+
+  /**
+   * Total number of frames the game has been running.
+   * @type {Number}
+  */
   upFrames = 0;
+
+  /**
+   * Total number of seconds the game has been running.
+   * @type {Number}
+  */
   globalUpTime = 0; // in seconds
+
+  /**
+   * Number of minutes the game ha been running.
+   * @type {Number}
+  */
   num_Minutes = 0;
+
+  /**
+   * Number of seconds in the current minute.
+   * @type {Number}
+  */
   num_Seconds = 0;
+
+  /**
+   * Formatted string that displays number of minutes the game has been running.
+   * @type {String}
+  */
   str_Minutes = "";
+
+  /**
+   * Formatted string that displays the number of seconds have passed in the
+   * current minute.
+   * @type {String}
+  */
   str_Seconds = "";
+
+  /**
+   * Player score.
+   * @type {Number}
+  */
   score = 0;
+
+  /**
+   * Array of animations.
+   * @type {Object}
+  */
   animations = [];
 
+  /**
+   * Constructor:
+   *    Initializes the player and enemy spawner, as well as setting up an event
+   *    listener for restarting the game.
+   * @param none
+   * @returns none
+  */
   constructor() {
     this.player = new Player(this);
     this.lastTime = 0;
@@ -22,23 +113,23 @@ class GameManager {
     window.addEventListener("keydown", (event) => this.keydown(event), false);
   }
 
+  /**
+   * update(dt):
+   *    Iterates through and updates all member objects.
+   * @param {Number} dt The amount of time since the last loop iteration.
+   * @returns none
+  */
   update(dt) {
-    if (this.gameOver) {
-      this.animations.forEach((animation) => {
-        animation.update(dt);
-      });
-      return;
-    }
+    // Advance animations:
+    this.animations.forEach((animation) => {
+      animation.update(dt);
+    });
+
     // Update total number of frames that have passed:
     this.upFrames += dt;
+
     // Calculate up-time using the number of frames: (in seconds)
     this.globalUpTime = Math.floor(this.upFrames / 60 * 100);
-
-    // Spawn a new enemy if interval has passed:
-    this.enemySpawner.update(dt);
-
-    // Check for player movement, attacks, etc.:
-    this.player.update(dt);
 
     // Check for enemy movement:
     this.enemies.forEach((enemy) => {
@@ -51,11 +142,14 @@ class GameManager {
     });
     this.updateLasers();
 
-    // Update Animations:
-    this.animations.forEach((animation) => {
-      animation.update(dt);
-    });
-    this.updateAnimations();
+    // Don't update other objects if the game has ended:
+    if (this.gameOver) return;
+
+    // Check for player movement, attacks, etc.:
+    this.player.update(dt);
+
+    // Spawn a new enemy if interval has passed:
+    this.enemySpawner.update(dt);
 
     this.checkGameOver();
 
@@ -68,6 +162,11 @@ class GameManager {
     Config.enemySpawnRate = 0.5 - 0.01 * Math.floor(this.numKills / 5);
   }
 
+  /**
+   * draw(graphics):
+   *    Iterates through all objects and draws them to the canvas.
+   * @param {CanvasRenderingContext2D} graphics Graphical context to draw to.
+  */
   draw(graphics) {
     // Draw player, enemies, particles, and lasers:
     this.animations.forEach((animation) => {
@@ -101,6 +200,12 @@ class GameManager {
     graphics.fillText(`Bombs: ${this.player.numBombs}`, Config.width + 15, 150);
   }
 
+  /**
+   * checkGameOver():
+   *    Checks if the player's ship has been destroyed and updates the gameOver
+   *    boolean accordingly
+   * @param none
+  */
   checkGameOver() {
     if (this.player.health <= 0) {
       // game lost
@@ -110,6 +215,12 @@ class GameManager {
     }
   }
 
+  /**
+   * updateLasers():
+   *    Iterates through each laser and removes it if it has gone out of bounds
+   *    or collided with an enemy.
+   * @param none
+  */
   updateLasers() {
     this.lasers.forEach((laser, index) => {
       if (laser.position.y <= 0 || laser.collided) {
@@ -118,6 +229,11 @@ class GameManager {
     });
   }
 
+  /**
+   * updateAnimations():
+   *    Removes finished animations.
+   * @param none
+  */
   updateAnimations() {
     this.animations.forEach((animation, index) => {
       if (animation.finished) {
@@ -126,6 +242,12 @@ class GameManager {
     });
   }
 
+  /**
+   * bombScreen():
+   *    Detonates a bomb that destroys all enemies on screen. Bomb uses are
+   *    limited, however.
+   * @param none
+  */
   bombScreen() {
     this.animations.push(new Animation(fsExplosionParameters, 0, Config.height / 2 - Config.width / 2, Config.width, Config.width));
     this.enemies.forEach((enemy) => {
@@ -135,10 +257,22 @@ class GameManager {
     this.enemies = [];
   }
 
+  /**
+   * createLaser():
+   *    Fires a laser using the player's position component.
+   * @param none
+   * @returns none
+  */
   createLaser() {
     this.lasers.push(new Laser(this.player));
   }
 
+  /**
+   * keydown(event):
+   *    Callback for the event listener
+   * @param {Event/Object} event Represents the key information
+   * @returns none
+  */
   keydown(event) {
     if (this.gameOver) {
       if (event.keyCode == 82) {
