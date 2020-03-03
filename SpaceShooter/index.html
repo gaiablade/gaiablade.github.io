@@ -5,13 +5,17 @@
 		<title>Space Shooter</title>
         <style>
             body {
-                background-image:
-                    url(https://www.esa.int/extension/pillars/design/pillars/images/nebula.jpg);
+                background-color: #616161;
+                background-image: url("images/space_wallpaper.jpg");
             }
             canvas {
                 border: 1px solid blue;
                 margin: 0 auto;
                 display: block;
+                background-image:
+                    /*url(https://www.esa.int/extension/pillars/design/pillars/images/nebula.jpg);*/
+                    url("images/space_450x500.png");
+                border-radius: 20px;
             }
             img {
                 display: none;
@@ -26,6 +30,8 @@
         <img src="images/explosion.png" id="explosion" width=256 height=256>
 	</head>
     <body>
+        <img style="display:block;margin-left:auto;margin-right:auto"
+             src="images/logo.png">
 		<div id="game_wrapper">
 			<canvas id="game_canvas" width=450px height=500px></canvas>
 			<span id="game_state"></span>

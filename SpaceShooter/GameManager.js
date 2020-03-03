@@ -183,12 +183,12 @@ class GameManager {
     })
 
     // Clear the stat bar on the right:
-    graphics.fillStyle = "#ffffff";
+    graphics.fillStyle = "#70140d";
     graphics.fillRect(Config.width, 0, Config.statBarDimensions.width, Config.statBarDimensions.height);
 
     // Configure text rendering:
     graphics.font = "17px Arial";
-    graphics.fillStyle = '#000000';
+    graphics.fillStyle = '#FFFFFF';
 
     // Display stats:
     graphics.fillText(`Stats`, Config.width + 50, 20);
