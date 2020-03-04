@@ -100,6 +100,12 @@ class GameManager {
   animations = [];
 
   /**
+   * Array of powerups.
+   * @type {Object}
+  */
+  powerups = [];
+
+  /**
    * Constructor:
    *    Initializes the player and enemy spawner, as well as setting up an event
    *    listener for restarting the game.
@@ -142,6 +148,11 @@ class GameManager {
     });
     this.updateLasers();
 
+    // Move powerups:
+    this.powerups.forEach((powerup) => {
+      powerup.update(dt);
+    });
+
     // Don't update other objects if the game has ended:
     if (this.gameOver) return;
 
@@ -173,14 +184,17 @@ class GameManager {
       if (!animation.finished) {
         animation.draw(graphics);
       }
-    })
+    });
     this.player.draw(graphics);
     this.enemies.forEach((enemy) => {
       enemy.draw(graphics);
     });
     this.lasers.forEach((laser) => {
       laser.draw(graphics);
-    })
+    });
+    this.powerups.forEach((powerup) => {
+      powerup.draw(graphics);
+    });
 
     // Clear the stat bar on the right:
     graphics.fillStyle = "#70140d";
@@ -286,6 +300,15 @@ class GameManager {
         this.enemies = [];
         this.lasers = [];
       }
+    }
+  }
+
+  spawnPowerups(position) {
+    if (this.numKills == 100) {
+      this.powerups.push(new SpeedPowerup(position, this));
+    }
+    else if (this.numKills % 50 == 100) {
+      this.powerups.push(new BombPowerup(position, this));
     }
   }
 }

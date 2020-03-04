@@ -48,7 +48,7 @@ class Laser {
    * @param {CanvasRenderingContext2D} graphics Graphical context to draw to.
   */
   draw(graphics) {
-    graphics.fillStyle = "#1eff00";
+    graphics.fillStyle = Config.laserColor;
     graphics.fillRect(this.position.x, this.position.y, this.size.width, this.size.height);
   }
 
@@ -70,8 +70,9 @@ class Laser {
       if (this.position.x < enemy.position.x + enemy.size.width && this.position.x + this.size.width > enemy.position.x) {
         if (this.position.y < enemy.position.y + enemy.size.height && this.position.y + this.size.height > enemy.position.y) {
           this.gm.animations.push(new Animation(explosionParameters, enemy.position.x, enemy.position.y))
-          delete this.gm.enemies[index];
           this.gm.numKills++;
+          this.gm.spawnPowerups(enemy.position);
+          delete this.gm.enemies[index];
           this.collided = true;
         }
       }

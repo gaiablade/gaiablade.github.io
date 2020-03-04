@@ -69,6 +69,14 @@ class Player extends Entity {
         delete this.gm.enemies[index];
       }
     });
+
+    this.gm.powerups.forEach((powerup, index) => {
+      if (this.position.x < powerup.position.x + powerup.size.width && this.position.x + this.size.width > powerup.position.x
+        && this.position.y < powerup.position.y + powerup.size.height && this.position.y + this.size.height > powerup.position.y) {
+        powerup.collisionFunc();
+        delete this.gm.powerups[index];
+      }
+    });
   }
 
   updateInput() {

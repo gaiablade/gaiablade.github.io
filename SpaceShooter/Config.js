@@ -11,6 +11,8 @@ const i_Ship = document.getElementById("ship");
 const i_Enemy = document.getElementById('enemy');
 const i_Retry = document.getElementById('replay_key');
 const i_Explosion = document.getElementById('explosion');
+const i_BombPowerup = document.getElementById('bomb_powerup');
+const i_SpeedPowerup = document.getElementById('speed_powerup');
 
 const Config = {
   // Canvas dimensions:
@@ -39,6 +41,7 @@ const Config = {
   laserHeight: 10,
   laserSpeed: 500,
   fireDelay: 0.15, // in ms
+  laserColor: "#1eff00",
 
   // Particle constants:
   particleInterval: 0.5,

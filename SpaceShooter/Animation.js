@@ -1,4 +1,5 @@
 "use strict";
+
 /**
  * AnimationTextureCoord class:
  *      Represents data for a texture coordinate in a spritesheet.
