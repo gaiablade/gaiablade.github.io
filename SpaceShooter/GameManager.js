@@ -307,7 +307,7 @@ class GameManager {
     if (this.numKills == 100) {
       this.powerups.push(new SpeedPowerup(position, this));
     }
-    else if (this.numKills % 50 == 100) {
+    else if (this.numKills % 50 == 0) {
       this.powerups.push(new BombPowerup(position, this));
     }
   }

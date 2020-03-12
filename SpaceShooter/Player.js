@@ -1,7 +1,16 @@
 "use strict";
 
+/**
+ * Player class:
+ *      Represents the active player character.
+ * @author Caleb Geyer
+ * @typedef Player
+*/
 class Player extends Entity {
-  // Key-Bindings:
+  /**
+   * Player input bindings and their behaviours.
+   * @type {Object}
+  */
   keys = {
     left:  { key: "left",  polled: false, state: "x_movement", mod: -1 },
     right: { key: "right", polled: false, state: "x_movement", mod:  1 },
@@ -10,27 +19,57 @@ class Player extends Entity {
     z:     { key: "z",     polled: false, state: "fire",       mod:  1 },
     x:     { key: "x",     polled: false, state: "bomb",       mod:  1 },
   }
+  /**
+   * Player actions polled that should be resolved in the update loop.
+   * @type {Object}
+  */
   polledActions = { x_movement: 0, y_movement: 0, fire: 0, bomb: 0 };
 
-  // Dimensions:
+  /**
+   * Pixel dimensions of player character.
+   * @type {Object}
+  */
   size = { width: 34, height: 37 };
 
-  // Handle to input-handler:
+  /**
+   * Player input-handler object.
+   * @type {InputHandler}
+  */
   input_handler = null;
 
-  // Lasers:
-  silentDuration = 100;
+  /**
+   * Frames since last bullet was fired.
+   * @type {Number}
+  */
+  silentDuration = Config.fireDelay;
 
-  // Particles:
+  /**
+   * Particle array.
+   * @type {Object}
+  */
   particles = [];
+  /**
+   * Frames since last particle was emitted.
+   * @type {Number}
+  */
   sinceLastParticle = Config.particleInterval;
 
-  // Bombs:
+  /**
+   * Number of bomb powerups collected still remaining.
+   * @type {Number}
+  */
   numBombs = 3;
 
-  // Sprite:
+  /**
+   * Player sprite.
+   * @type {HTMLImageElement}
+  */
   sprite = i_Ship;
 
+  /**
+   * Sets GameManager handle and initializes position and input-handler.
+   * @param {GameManager} gm GameManager handle.
+  */
   constructor(gm) {
     super();
     this.gm = gm;
@@ -39,6 +78,10 @@ class Player extends Entity {
     this.input_handler = new InputHandler(this);
   }
 
+  /**
+   * Updates input, movement, collisions, etc.
+   * @param {Number} dt DeltaTime.
+  */
   update(dt) {
     this.particles.forEach((value) => {
       value.update(dt);
@@ -50,6 +93,10 @@ class Player extends Entity {
     this.checkCollisions();
   }
 
+  /**
+   * Draws Player to canvas.
+   * @param {CanvasRenderingContext2D} graphics Graphical context to draw to.
+  */
   draw(graphics) {
     this.particles.forEach((value) => {
       value.draw(graphics);
@@ -57,10 +104,18 @@ class Player extends Entity {
     graphics.drawImage(this.sprite, this.position.x, this.position.y);
   }
 
+  /**
+   * Pushes new laser into the GameManager's laser array.
+   * @param none.
+  */
   fireLaser() {
     this.gm.createLaser();
   }
 
+  /**
+   * Checks for collisions with enemies and powerups.
+   * @param none.
+  */
   checkCollisions() {
     this.gm.enemies.forEach((value, index) => {
       if (this.position.x < value.position.x + value.size.width && this.position.x + this.size.width > value.position.x
@@ -79,6 +134,10 @@ class Player extends Entity {
     });
   }
 
+  /**
+   * Resolves polled actions.
+   * @param none.
+  */
   updateInput() {
     // Handle movement:
     Object.values(this.keys).forEach((key, index) => {
@@ -88,6 +147,10 @@ class Player extends Entity {
     });
   }
 
+  /**
+   * Resolves polled attacks and bomb uses.
+   * @param none.
+  */
   updateAttack() {
     if (this.keys.z.polled && this.silentDuration >= Config.fireDelay) {
       this.silentDuration = 0;
@@ -100,6 +163,10 @@ class Player extends Entity {
     }
   }
 
+  /**
+   * Updates movement and prevents movement out of bounds.
+   * @param {Number} dt DeltaTime.
+  */
   updateMovement(dt) {
     this.sinceLastParticle += dt;
     this.velocity.x += Math.ceil(this.polledActions.x_movement * dt * Config.playerSpeed);
@@ -135,6 +202,10 @@ class Player extends Entity {
     this.velocity.y = 0;
   }
 
+  /**
+   * Moves player far out of bounds to simulate destruction.
+   * @param none.
+  */
   destroy() {
     this.position.x = 999;
     this.position.y = 999;

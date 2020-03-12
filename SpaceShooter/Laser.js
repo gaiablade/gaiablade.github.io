@@ -57,7 +57,7 @@ class Laser {
    * @param {Number} dt DeltaTime
   */
   updatePosition(dt) {
-    this.position.y -= Math.ceil(Config.laserSpeed * dt);
+    this.position.y -= Config.laserSpeed * dt;
   }
 
   /**
