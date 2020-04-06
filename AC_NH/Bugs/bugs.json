@@ -1,0 +1,32 @@
+{
+    "common_butterfly": {
+        "id": "Common butterfly",
+        "img_file": "common_buttefly.png",
+        "price": "?"
+    },
+    "yellow_butterfly": {
+        "id": "Yellow butterfly",
+        "img_file": "yellow_butterfly.png",
+        "price": "?"
+    },
+    "tiger_butterfly": {
+        "id": "Tiger butterfly",
+        "img_file": "tiger_butterfly.png",
+        "price": "?"
+    },
+    "peacock_butterfly": {
+        "id": "Peacock butterfly",
+        "img_file": "peacock_butterfly.png",
+        "price": "2500"
+    },
+    "common_bluebottle": {
+        "id": "Common bluebottle",
+        "img_file": "common_bluebottle.png",
+        "price": "?"
+    },
+    "paper_kite_butterfly": {
+        "id": "Paper kite butterfly",
+        "img_file": "paper_kite_butterfly.png",
+        "price": "?"
+    }
+}
