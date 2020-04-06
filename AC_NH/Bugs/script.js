@@ -5,7 +5,7 @@ function populateList() {
     });
     for (const bug of Object.values(bugs)) {
         let node = document.createElement("LI");
-        let textNode = document.createTextNode(bug.id);
+        let textNode = document.createTextNode(bug["id"]);
         node.appendChild(textNode);
         list.appendChild(node);
     }
