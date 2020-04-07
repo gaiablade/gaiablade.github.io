@@ -1,3 +1,11 @@
+body, html {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: darkgrey;
     background-repeat: no-repeat;
@@ -6,127 +14,34 @@ body {
     background-attachment: fixed;
 }
 
-h1 {
-    margin: auto;
-    text-align: center;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: gold;
+.bg-color {
+    background-color: blue;
+    background-image: url("img/mitzi.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    filter: blur(8px);
 }
 
-h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
-}
-
-h3 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
+li {
+    list-style-type: none;
 }
 
 .main {
+    z-index: 100; /* Stay on top */
     margin-left: 160px;
     padding: 0px 10px;
-}
-
-.main .textContainer {
-    position: relative;
-    max-width: 800px; /* Maximum width */
-    padding-top: 5px;
-    margin: 0 auto;
-}
-
-.main .textContainer .content {
-    background: rgba(35.0, 60.0, 220.0, 0.85);
-    border-radius: 50px;
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
-    border: 5px solid black;
-}
-
-.main .textContainer .content .center {
-    display: block;
-    border: 2px solid blue;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-
-canvas {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    padding-bottom: 25px;
-}
-
-.main button {
-    display: block;
-    position: absolute;
-    bottom: 30%;
-}
-
-.main .rightButton {
-    right: 15%;
-}
-
-.main .leftButton {
-    left: 15%;
 }
 
 .main p {
     color: white;
     text-align: center;
 }
-
-.main a {
-    color: lightblue;
-}
-
-.sidenav {
-    height: 99%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0; 
-    background-color: rgba(0.0, 0.0, 0.0, 0.8); /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    border-radius: 25px;
-}
-
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-    cursor: pointer;
-}
-
-.sidenav button {
-    position: absolute;
-    bottom: 0;
-    display: block;
-    margin-bottom: 50px;
-    margin-left: 30px;
-}
-
-.textContainer .content2 img {
-    width: 25%;
-    float: right;
-}
-
-.textContainer .content2 {
-    height: 350px;
-}
-
 .info_bar {
     height: 99%; /* Full-height: remove this if you want "auto" height */
     width: 300px; /* Set the width of the sidebar */
@@ -138,4 +53,12 @@ canvas {
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
     border-radius: 25px;
+}
+
+.list ul li {
+    background-color: purple;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+    z-index: 100;
 }
