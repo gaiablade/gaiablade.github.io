@@ -56,14 +56,14 @@
   "agrias_butterfly": {
     "id": "Agrias butterfly",
     "img_file": "agrias_butterfly.png",
-    "price": "?",
-    "location": "3000"
+    "price": "3000",
+    "location": ""
   },
   "rajah_brooke's_birdwing": {
     "id": "Rajah Brooke's birdwing",
     "img_file": "rajah_brookes_birdwing.png",
-    "price": "?",
-    "location": "2500"
+    "price": "2500",
+    "location": ""
   },
   "?3": {
     "id": "?",
@@ -247,7 +247,7 @@
   },
   "man-faced_stink_bug": {
     "id": "Man-faced stink bug",
-    "img_file": "man-faced_stink_bug",
+    "img_file": "man-faced_stink_bug.png",
     "price": "1000",
     "location": ""
   },
