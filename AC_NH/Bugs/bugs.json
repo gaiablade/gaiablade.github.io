@@ -3,480 +3,640 @@
     "id": "Common butterfly",
     "img_file": "common_butterfly.png",
     "price": "160",
-    "location": ""
+    "location": "Flying",
+    "months": "Jan. - June, Sept. - Dec.",
+    "time": "4:00AM - 7:00PM"
   },
   "yellow_butterfly": {
     "id": "Yellow butterfly",
     "img_file": "yellow_butterfly.png",
     "price": "160",
-    "location": ""
+    "location": "Flying",
+    "months": "Mar. - Apr., Sept. - Oct.",
+    "time": "4:00AM - 7:00PM"
   },
   "tiger_butterfly": {
     "id": "Tiger butterfly",
     "img_file": "tiger_butterfly.png",
     "price": "240",
-    "location": ""
+    "location": "Flying",
+    "months": "Mar. - Sept.",
+    "time": "4:00AM - 7:00PM"
   },
   "peacock_butterfly": {
     "id": "Peacock butterfly",
     "img_file": "peacock_butterfly.png",
     "price": "2500",
-    "location": ""
+    "location": "Hybrid Flowers",
+    "months": "Mar. - June",
+    "time": "4:00AM - 7:00PM"
   },
   "common_bluebottle": {
     "id": "Common bluebottle",
     "img_file": "common_bluebottle.png",
     "price": "300",
-    "location": ""
+    "location": "Flying",
+    "months": "Apr. - Aug.",
+    "time": "4:00AM - 7:00PM"
   },
   "paper_kite_butterfly": {
     "id": "Paper kite butterfly",
     "img_file": "paper_kite_butterfly.png",
     "price": "1000",
-    "location": ""
+    "location": "Flying",
+    "months": "All-year",
+    "time": "8:00AM - 7:00PM"
   },
   "?1": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?2": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "emperor_butterfly": {
     "id": "Emperor butterfly",
     "img_file": "emperor_butterfly.png",
     "price": "4000",
-    "location": ""
+    "location": "Flying",
+    "months": "Jan. - Mar., June - Sept., Dec.",
+    "time": "5:00PM - 8:00AM"
   },
   "agrias_butterfly": {
     "id": "Agrias butterfly",
     "img_file": "agrias_butterfly.png",
     "price": "3000",
-    "location": ""
+    "location": "Flying",
+    "months": "Apr. - Sept.",
+    "time": "8:00AM - 5:00PM"
   },
   "rajah_brooke's_birdwing": {
     "id": "Rajah Brooke's birdwing",
     "img_file": "rajah_brookes_birdwing.png",
     "price": "2500",
-    "location": ""
+    "location": "Purple flowers",
+    "months": "Jan. - Feb., Apr. - Sept., Dec.",
+    "time": "8:00AM - 5:00PM"
   },
   "?3": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "moth": {
     "id": "Moth",
     "img_file": "moth.png",
     "price": "130",
-    "location": ""
+    "location": "Lights",
+    "months": "All-year",
+    "time": "7:00PM - 4:00AM"
   },
   "atlas_moth": {
     "id": "Atlas moth",
     "img_file": "atlas_moth.png",
     "price": "3000",
-    "location": ""
+    "location": "Trees",
+    "months": "Apr. - Sept.",
+    "time": "7:00PM - 4:00AM"
   },
   "madagascan_sunset_moth": {
     "id": "Madagascan sunset moth",
     "img_file": "madagascan_sunset_moth.png",
     "price": "2500",
-    "location": ""
+    "location": "Flying",
+    "months": "Apr. - Sept.",
+    "time": "8:00AM - 4:00PM"
   },
   "long_locust": {
     "id": "Long locust",
     "img_file": "long_locust.png",
     "price": "200",
-    "location": ""
+    "location": "Ground",
+    "months": "Apr. - Nov.",
+    "time": "8:00AM - 7:00PM"
   },
   "?4": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?5": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?6": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?7": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?8": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "mantis": {
     "id": "Mantis",
     "img_file": "mantis.png",
     "price": "430",
-    "location": ""
+    "location": "Flowers",
+    "months": "Mar. - Nov.",
+    "time": "8:00AM - 5:00PM"
   },
   "orchid_mantis": {
     "id": "Orchid mantis",
     "img_file": "orchid_mantis.png",
     "price": "2400",
-    "location": ""
+    "location": "White Flowers",
+    "months": "Mar. - Nov.",
+    "time": "8:00AM - 5:00PM"
   },
   "honeybee": {
     "id": "Honeybee",
     "img_file": "honeybee.png",
     "price": "200",
-    "location": ""
+    "location": "Flying",
+    "months": "Mar. - July",
+    "time": "8:00AM - 5:00PM"
   },
   "wasp": {
     "id": "Wasp",
     "img_file": "wasp.png",
     "price": "2500",
-    "location": ""
+    "location": "Shake trees",
+    "months": "All-year",
+    "time": "All-day"
   },
   "?9": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?10": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?11": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?12": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?13": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?14": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?15": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "darner_dragonfly": {
     "id": "Darner dragonfly",
     "img_file": "darner_dragonfly.png",
     "price": "230",
-    "location": ""
+    "location": "Flying",
+    "months": "Apr. - Oct.",
+    "time": "8:00AM - 5:00PM"
   },
   "?16": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?17": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?18": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?19": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?20": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?21": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "giant_water_bug": {
     "id": "Giant water bug",
     "img_file": "giant_water_bug.png",
     "price": "2000",
-    "location": ""
+    "location": "Ponds and Rivers",
+    "months": "Apr. - Sept.",
+    "time": "7:00PM - 8:00AM"
   },
   "stinkbug": {
     "id": "Stinkbug",
     "img_file": "stinkbug.png",
     "price": "120",
-    "location": ""
+    "location": "Flowers",
+    "months": "Mar. - Oct.",
+    "time": "All-day"
   },
   "man-faced_stink_bug": {
     "id": "Man-faced stink bug",
     "img_file": "man-faced_stink_bug.png",
     "price": "1000",
-    "location": ""
+    "location": "On flowers",
+    "months": "Mar. - Nov.",
+    "time": "7:00PM - 8:00AM"
   },
   "ladybug": {
     "id": "Ladybug",
     "img_file": "ladybug.png",
     "price": "200",
-    "location": ""
+    "location": "Flowers",
+    "months": "Mar. - June, Oct.",
+    "time": "8:00AM - 5:00PM"
   },
   "tiger_beetle": {
     "id": "Tiger beetle",
     "img_file": "tiger_beetle.png",
     "price": "1500",
-    "location": ""
+    "location": "Ground",
+    "months": "Feb. - Nov.",
+    "time": "All-day"
   },
   "jewel_beetle": {
     "id": "Jewel beetle",
     "img_file": "jewel_beetle.png",
     "price": "2400",
-    "location": ""
+    "location": "Tree stumps",
+    "months": "Apr. - Aug.",
+    "time": "All-day"
   },
   "?220": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "citrus_long-horned_beetle": {
     "id": "Citrus long-horned beetle",
     "img_file": "citrus_long-horned_beetle.png",
     "price": "350",
-    "location": ""
+    "location": "Tree stumps",
+    "months": "All-year",
+    "time": "All-day"
   },
   "?22": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?23": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?24": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?25": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?26": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?27": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?28": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?29": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?30": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?31": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?32": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?33": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?34": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?35": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?36": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?37": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?38": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?39": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?40": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?41": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "bagworm": {
     "id": "Bagworm",
     "img_file": "bagworm.png",
     "price": "600",
-    "location": ""
+    "location": "Shaking trees",
+    "months": "All-year",
+    "time": "All-day"
   },
   "?42": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "hermit_crab": {
     "id": "Hermit crab",
     "img_file": "hermit_crab.png",
     "price": "1000",
-    "location": ""
+    "location": "Beach",
+    "months": "All-year",
+    "time": "7:00PM - 8:00AM"
   },
   "wharf_roach": {
     "id": "Wharf roach",
     "img_file": "wharf_roach.png",
     "price": "200",
-    "location": ""
+    "location": "Beach rocks",
+    "months": "All-year",
+    "time": "All-day"
   },
   "?43": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "?44": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   },
   "flea": {
     "id": "Flea",
     "img_file": "flea.png",
     "price": "70",
-    "location": ""
+    "location": "Villagers",
+    "months": "Apr. - Nov.",
+    "time": "All-day"
   },
   "snail": {
     "id": "Snail",
     "img_file": "snail.png",
     "price": "250",
-    "location": ""
+    "location": "Rocks during rain",
+    "months": "All-year",
+    "time": "All-day"
   },
   "pill_bug": {
     "id": "Pill bug",
     "img_file": "pill_bug.png",
     "price": "250",
-    "location": ""
+    "location": "Hit rocks",
+    "months": "Sept. - June, Mar. - Dec.",
+    "time": "11:00PM - 4:00PM"
   },
   "centipede": {
     "id": "Centipede",
     "img_file": "centipede.png",
     "price": "300",
-    "location": ""
+    "location": "Hit rocks",
+    "months": "Sept. - June",
+    "time": "4:00PM - 11:00PM"
   },
   "spider": {
     "id": "Spider",
     "img_file": "spider.png",
     "price": "480",
-    "location": ""
+    "location": "Shake trees",
+    "months": "All-year",
+    "time": "7:00PM - 8:00AM"
   },
   "tarantula": {
     "id": "Tarantula",
     "img_file": "tarantula.png",
     "price": "8000",
-    "location": ""
+    "location": "Ground",
+    "months": "Nov. - Apr.",
+    "time": "7:00PM - 8:00AM"
   },
   "?45": {
     "id": "?",
     "img_file": "?",
     "price": "?",
-    "location": ""
+    "location": "",
+    "months": "",
+    "time": ""
   }
 }
