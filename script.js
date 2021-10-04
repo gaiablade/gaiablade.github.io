@@ -2,18 +2,16 @@ class Controls {
     constructor() {
     }
 
-    async loadYoutubeHistory() {
-        /*
-        const html = await fetch('https://www.youtube.com/user/papermario231/videos', {
+    async getLatestYoutubeVideos() {
+        const url = 'https://www.googleapis.com/youtube/v3/videos?id=UCh9NCEDV6XQtAW11EbOgCLw&part=snippet,contentDetails,statistics,status&key=AIzaSyBrezJRjhBoiUe5dtVZ-Vf7DCwds9DZnvs';
+
+        const res = await fetch(url, {
             method: 'GET',
-            mode: 'no-cors'
-        }).then(res => res.text());
-        console.log(html);
-        */
-        //fetch('https://www.youtube.com/user/papermario231/videos', {
-        fetch('https://www.google.com/', {
-            method: 'GET',
-        }).then(res => console.log(res));
+        });
+
+        const json = await res.json();
+
+        console.log(json);
     }
 }
 
