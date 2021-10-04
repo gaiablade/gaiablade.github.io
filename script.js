@@ -3,7 +3,9 @@ class Controls {
     }
 
     async getLatestYoutubeVideos() {
-        const url = 'https://www.googleapis.com/youtube/v3/videos?id=UCh9NCEDV6XQtAW11EbOgCLw&part=snippet,contentDetails,statistics,status&key=AIzaSyBrezJRjhBoiUe5dtVZ-Vf7DCwds9DZnvs';
+        const url = 'https://www.googleapis.com/youtube/v3/'
+            'channels?key=AIzaSyBrezJRjhBoiUe5dtVZ-Vf7DCwds9DZnvs'
+            '&part=contentDetails&id=UCh9NCEDV6XQtAW11EbOgCLw';
 
         const res = await fetch(url, {
             method: 'GET',
