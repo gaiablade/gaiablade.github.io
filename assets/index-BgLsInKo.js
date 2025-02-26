@@ -1,0 +1,9 @@
+(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))d(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const u of t.addedNodes)u.tagName==="LINK"&&u.rel==="modulepreload"&&d(u)}).observe(document,{childList:!0,subtree:!0});function s(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function d(e){if(e.ep)return;e.ep=!0;const t=s(e);fetch(e.href,t)}})();const h=document.querySelector("#app");h.innerHTML=`
+    <div>
+        <h1>Alphabet Race!</h1>
+        <div>Type the alphabet as quickly as you can! Making a mistake will reset the timer.</div>
+        <h2 id="timer-h3" style="margin-top:4rem">0:00.00</h2>
+        <textarea style="resize:none;font-size:2rem;display:block" placeholder="Type here..." cols="26" rows="1" id="input-textarea"></textarea>
+        <button id="reset-button">Reset</button>
+    </div>
+`;const p="abcdefghijklmnopqrstuvwxyz";let n=0,o=-1,f=0,a=!1;const i=document.querySelector("#input-textarea"),l=document.querySelector("#reset-button"),m=document.querySelector("#timer-h3");l.onclick=()=>{i.value="",i.disabled=!1,o=-1,n=0,a=!1,l.remove()};l.remove();i.oninput=c=>{if(a)return;const{inputType:r,data:s}=c;r=="insertText"&&s!==null&&s.toLowerCase()===p[n]?(o<0&&(o=Date.now()),n++,n==p.length&&(a=!0,i.disabled=!0,document.body.children[0].appendChild(l))):(i.value="",n=0,o=-1)};function y(){if(o>=0){a||(f=Date.now());const r=(f-o)/1e3;m.innerText=`${r}s`}else m.innerText="START TYPING TO BEGIN";requestAnimationFrame(y)}requestAnimationFrame(y);
