@@ -1,1 +1,0 @@
-var e=`/assets/1-cropped-DaWejfe_.png`;export{e as default};
