@@ -24,7 +24,7 @@
 23,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Second Area, Back Hallway)",0,Panacea,,26
 24,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Second Area, Organ Room)",0,Iron Sword,,27
 25,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Boss Room)",0,Mid-Ether,Chest containing Chancellor is not counted,28
-26,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Ether,,29
+26,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Ether,"The Prison Towers cannot be returned to after leaving, so the following chests are *missable*!",29
 27,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Mid-Potion,,30
 28,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Mid-Potion,,31
 29,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Ether,,32
@@ -39,3 +39,23 @@
 38,2300AD,???,Zone 16,0,Silver Sword,,41
 39,2300AD,???,Zone 16,0,Silver Bow,,42
 40,2300AD,???,Zone 16,0,Ether,,43
+41,2300AD,???,Arris Dome,0,Mid-Ether,,44
+42,2300AD,???,Arris Dome,0,Mid-Ether,Inspect corpse to trigger rat chase. Catching the rat will reveal the password to unlock the area with this chest.,45
+43,2300AD,???,Abandoned Sewers,0,600G,"For RetroAchievements, it's a good idea to skip this area for now and come back later to avoid over-leveling for level-locked achievements.",46
+44,2300AD,???,Abandoned Sewers,0,Rage Band,,47
+45,2300AD,???,Abandoned Sewers,0,Thunder Blade,,48
+46,2300AD,???,Site 32,0,Mid-Potion,,49
+47,2300AD,???,Site 32,0,Race Recorder,"After racing Johnny, go left to travel the wasteland by foot.",50
+48,2300AD,???,"Derelict Factory, Labratory Side",0,Shelter,,51
+49,2300AD,???,"Derelict Factory, Factory Side",0,Mid-Ether,"On the first basement level of the factory side, there's a hallway that obscures the party. Going right and hitting A will open a hidden chest.",52
+50,2300AD,???,"Derelict Factory, Factory Side",0,Mid-Potion,,53
+51,2300AD,???,"Derelict Factory, Factory Side",0,Mid-Ether,,54
+52,2300AD,???,"Derelict Factory, Factory Side",0,400G,,55
+53,2300AD,???,"Derelict Factory, Factory Side",0,Shelter,,56
+54,2300AD,???,"Derelict Factory, Factory Side",0,Ether,,57
+55,2300AD,???,"Derelict Factory, Factory Side",0,Bandit's Bow,,58
+56,2300AD,???,"Derelict Factory, Factory Side",0,Thunder Blade,,59
+57,2300AD,???,"Derelict Factory, Factory Side",0,Ether,,60
+58,2300AD,???,"Derelict Factory, Labratory Side",0,Titanium Vest,,61
+59,2300AD,???,"Derelict Factory, Labratory Side",0,Hammer Arm,,62
+60,2300AD,???,"Derelict Factory, Labratory Side",0,Plasma Gun,,63

@@ -24,7 +24,7 @@
 23,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Second Area, Back Hallway)",0,Panacea,,26
 24,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Second Area, Organ Room)",0,Iron Sword,,27
 25,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Boss Room)",0,Mid-Ether,Chest containing Chancellor is not counted,28
-26,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Ether,,29
+26,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Ether,"The Prison Towers cannot be returned to after leaving, so the following chests are *missable*!",29
 27,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Mid-Potion,,30
 28,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Mid-Potion,,31
 29,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Ether,,32
@@ -39,5 +39,25 @@
 38,2300AD,???,Zone 16,0,Silver Sword,,41
 39,2300AD,???,Zone 16,0,Silver Bow,,42
 40,2300AD,???,Zone 16,0,Ether,,43
+41,2300AD,???,Arris Dome,0,Mid-Ether,,44
+42,2300AD,???,Arris Dome,0,Mid-Ether,Inspect corpse to trigger rat chase. Catching the rat will reveal the password to unlock the area with this chest.,45
+43,2300AD,???,Abandoned Sewers,0,600G,"For RetroAchievements, it's a good idea to skip this area for now and come back later to avoid over-leveling for level-locked achievements.",46
+44,2300AD,???,Abandoned Sewers,0,Rage Band,,47
+45,2300AD,???,Abandoned Sewers,0,Thunder Blade,,48
+46,2300AD,???,Site 32,0,Mid-Potion,,49
+47,2300AD,???,Site 32,0,Race Recorder,"After racing Johnny, go left to travel the wasteland by foot.",50
+48,2300AD,???,"Derelict Factory, Labratory Side",0,Shelter,,51
+49,2300AD,???,"Derelict Factory, Factory Side",0,Mid-Ether,"On the first basement level of the factory side, there's a hallway that obscures the party. Going right and hitting A will open a hidden chest.",52
+50,2300AD,???,"Derelict Factory, Factory Side",0,Mid-Potion,,53
+51,2300AD,???,"Derelict Factory, Factory Side",0,Mid-Ether,,54
+52,2300AD,???,"Derelict Factory, Factory Side",0,400G,,55
+53,2300AD,???,"Derelict Factory, Factory Side",0,Shelter,,56
+54,2300AD,???,"Derelict Factory, Factory Side",0,Ether,,57
+55,2300AD,???,"Derelict Factory, Factory Side",0,Bandit's Bow,,58
+56,2300AD,???,"Derelict Factory, Factory Side",0,Thunder Blade,,59
+57,2300AD,???,"Derelict Factory, Factory Side",0,Ether,,60
+58,2300AD,???,"Derelict Factory, Labratory Side",0,Titanium Vest,,61
+59,2300AD,???,"Derelict Factory, Labratory Side",0,Hammer Arm,,62
+60,2300AD,???,"Derelict Factory, Labratory Side",0,Plasma Gun,,63
 `,to=[`src`];Za(((e,t)=>{let n=e.__vccOpts||e;for(let[e,r]of t)n[e]=r;return n})(Fn({__name:`App`,setup(e){let t=r(eo);function n(e){return`./images/${e.toString().padStart(3,`0`)}-cropped.png`}function r(e){return e.split(`
 `).slice(1).filter(e=>e!=``).map(e=>i(e))}function i(e){let t=a(e),n=Number.parseInt(t[0]),r=t[4]===`TRUE`;return{chestNumber:n,timePeriod:t[1],location:t[2],subLocation:t[3],isMissable:r,contents:t[5],notes:t[6]}}function a(e){let t=[];for(let n=0;n<e.length;n++){let r=e[n];if(r==`,`)t.push(``);else if(r==`"`){n+=1;let r=n;for(;e[n]!==`"`;)n++;let i=n;t.push(e.substring(r,i)),n+=1}else{let i=n;for(;n!==e.length&&e[n]!==`,`;)n+=1;let a=n;i===a?t.push(r):t.push(e.substring(i,a))}}return t}return(e,r)=>(Ci(),Oi(`main`,null,[Z(`table`,null,[r[0]||=Z(`thead`,null,[Z(`tr`,null,[Z(`td`,null,`Chest`),Z(`td`,null,`Image`),Z(`td`,null,`Notes`)])],-1),Z(`tbody`,null,[(Ci(!0),Oi(Y,null,or(Bt(t),e=>(Ci(),Oi(`tr`,{key:e.chestNumber},[Z(`td`,null,[Z(`p`,null,`Chest Number: `+A(e.chestNumber),1),Z(`p`,null,`Time Period: `+A(e.timePeriod),1),Z(`p`,null,`Location: `+A(e.location)+`, `+A(e.subLocation),1),Z(`p`,null,`Contents: `+A(e.contents),1),Z(`p`,null,`Is Missable? `+A(e.isMissable?`✅`:`❌`),1)]),Z(`td`,null,[Z(`img`,{src:n(e.chestNumber),alt:``,width:`350`},null,8,to)]),Z(`td`,null,A(e.notes||`-`),1)]))),128))])])]))}}),[[`__scopeId`,`data-v-1ee7355f`]])).mount(`#app`);
