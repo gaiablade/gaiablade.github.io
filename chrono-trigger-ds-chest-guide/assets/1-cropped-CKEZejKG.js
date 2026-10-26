@@ -1,1 +1,0 @@
-var e=`/chrono-trigger-ds-chest-guide/assets/1-cropped-DaWejfe_.png`;export{e as default};
