@@ -1,4 +1,41 @@
-﻿Chest Num,Time,Location,Sub-Location,Is Missable?,Contents
-1,1000AD,Truce,Mayor's House (1st Floor),0,Potion
-2,1000AD,Truce,Mayor's House (2nd Floor),0,100G
-3,1000AD,Porre,Mayor's Manor (2nd Floor),0,Shelter
+﻿Chest Num,Time,Location,Sub-Location,Is Missable?,Contents,Notes,Combo Num
+1,1000AD,Truce,Mayor's House (1st Floor),0,Potion,,1
+2,1000AD,Truce,Mayor's House (2nd Floor),0,100G,,2
+3,1000AD,Porre,Mayor's Manor (2nd Floor),0,Shelter,Easy to miss,3
+4,600AD,Truce,Truce Canyon,0,Potion,,5
+5,600AD,Truce,Truce Canyon,0,Power Glove,,6
+6,600AD,Guardia,Guardia Castle (Kitchen),0,Ether,,8
+7,600AD,Guardia,"Guardia Castle (Right, 3rd Floor)",0,Potion,,9
+8,600AD,Guardia,"Guardia Castle (Left, 3rd Floor)",0,100G,,10
+9,600AD,Guardia,"Guardia Castle (Left, 5th Floor)",0,Bronze Armor,,11
+10,600AD,Guardia,"Guardia Castle (Right, 5th Floor)",0,Ether,Leene's Room,12
+11,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (1st Hallway)",0,Athenian Water,,13
+12,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (2nd Hallway)",0,Potion,,14
+13,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Left Room)",0,Maiden's Suit,,15
+14,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Left Room)",0,Potion,,16
+15,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Left Room)",0,Ether,,17
+16,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Left Corridor)",0,Steel Saber,,19
+17,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Fake Queen Room)",0,100G,,20
+18,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Fake Queen Room)",0,Ether,,21
+19,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Hidden Magus Status Room)",0,Speed Belt,Accessed by going right through hidden exit in Fake Queen room,22
+20,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Hidden Magus Status Room)",0,Guardian Bangle,Accessed by going right through hidden exit in Fake Queen room,23
+21,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Second Area)",0,Shelter,,24
+22,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Second Area, Back Hallway)",0,Potion,,25
+23,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Second Area, Back Hallway)",0,Panacea,,26
+24,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Second Area, Organ Room)",0,Iron Sword,,27
+25,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Boss Room)",0,Mid-Ether,Chest containing Chancellor is not counted,28
+26,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Ether,,29
+27,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Mid-Potion,,30
+28,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Mid-Potion,,31
+29,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Ether,,32
+30,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Mid-Potion,,33
+31,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Bronze Armor,,34
+32,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Shelter,,35
+33,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Shelter,,36
+34,1000AD,Guardia,"Guardia Castle, Prison Towers",1,1500G,,37
+35,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Silver Sword,,38
+36,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Shelter,Located after the fight with Dragon Tank,39
+37,2300AD,???,Zone 16,0,Berserker Ring,,40
+38,2300AD,???,Zone 16,0,Silver Sword,,41
+39,2300AD,???,Zone 16,0,Silver Bow,,42
+40,2300AD,???,Zone 16,0,Ether,,43
