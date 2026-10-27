@@ -1,12 +1,12 @@
 ﻿Chest Num,Time,Location,Sub-Location,Is Missable?,Contents,Notes,Combo Num
 1,1000AD,Truce,Mayor's House (1st Floor),0,Potion,,1
-2,1000AD,Truce,Mayor's House (2nd Floor),0,100G,,2
+2,1000AD,Truce,Mayor's House (2nd Floor),0,100 G,,2
 3,1000AD,Porre,Mayor's Manor (2nd Floor),0,Shelter,Easy to miss,3
 4,600AD,Truce,Truce Canyon,0,Potion,,5
 5,600AD,Truce,Truce Canyon,0,Power Glove,,6
 6,600AD,Guardia,Guardia Castle (Kitchen),0,Ether,,8
 7,600AD,Guardia,"Guardia Castle (Right, 3rd Floor)",0,Potion,,9
-8,600AD,Guardia,"Guardia Castle (Left, 3rd Floor)",0,100G,,10
+8,600AD,Guardia,"Guardia Castle (Left, 3rd Floor)",0,100 G,,10
 9,600AD,Guardia,"Guardia Castle (Left, 5th Floor)",0,Bronze Armor,,11
 10,600AD,Guardia,"Guardia Castle (Right, 5th Floor)",0,Ether,Leene's Room,12
 11,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (1st Hallway)",0,Athenian Water,,13
@@ -15,7 +15,7 @@
 14,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Left Room)",0,Potion,,16
 15,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Left Room)",0,Ether,,17
 16,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Left Corridor)",0,Steel Saber,,19
-17,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Fake Queen Room)",0,100G,,20
+17,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Fake Queen Room)",0,100 G,,20
 18,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Fake Queen Room)",0,Ether,,21
 19,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Hidden Magus Status Room)",0,Speed Belt,Accessed by going right through hidden exit in Fake Queen room,22
 20,600AD,Guardia,"Manolia Cathedral, Fiend Hideout (Hidden Magus Status Room)",0,Guardian Bangle,Accessed by going right through hidden exit in Fake Queen room,23
@@ -32,7 +32,7 @@
 31,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Bronze Armor,,34
 32,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Shelter,,35
 33,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Shelter,,36
-34,1000AD,Guardia,"Guardia Castle, Prison Towers",1,1500G,,37
+34,1000AD,Guardia,"Guardia Castle, Prison Towers",1,1500 G,,37
 35,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Silver Sword,,38
 36,1000AD,Guardia,"Guardia Castle, Prison Towers",1,Shelter,Located after the fight with Dragon Tank,39
 37,2300AD,???,Zone 16,0,Berserker Ring,,40
@@ -41,7 +41,7 @@
 40,2300AD,???,Zone 16,0,Ether,,43
 41,2300AD,???,Arris Dome,0,Mid-Ether,,44
 42,2300AD,???,Arris Dome,0,Mid-Ether,Inspect corpse to trigger rat chase. Catching the rat will reveal the password to unlock the area with this chest.,45
-43,2300AD,???,Abandoned Sewers,0,600G,"For RetroAchievements, it's a good idea to skip this area for now and come back later to avoid over-leveling for level-locked achievements.",46
+43,2300AD,???,Abandoned Sewers,0,600 G,"For RetroAchievements, it's a good idea to skip this area for now and come back later to avoid over-leveling for level-locked achievements.",46
 44,2300AD,???,Abandoned Sewers,0,Rage Band,,47
 45,2300AD,???,Abandoned Sewers,0,Thunder Blade,,48
 46,2300AD,???,Site 32,0,Mid-Potion,,49
@@ -50,7 +50,7 @@
 49,2300AD,???,"Derelict Factory, Factory Side",0,Mid-Ether,"On the first basement level of the factory side, there's a hallway that obscures the party. Going right and hitting A will open a hidden chest.",52
 50,2300AD,???,"Derelict Factory, Factory Side",0,Mid-Potion,,53
 51,2300AD,???,"Derelict Factory, Factory Side",0,Mid-Ether,,54
-52,2300AD,???,"Derelict Factory, Factory Side",0,400G,,55
+52,2300AD,???,"Derelict Factory, Factory Side",0,400 G,,55
 53,2300AD,???,"Derelict Factory, Factory Side",0,Shelter,,56
 54,2300AD,???,"Derelict Factory, Factory Side",0,Ether,,57
 55,2300AD,???,"Derelict Factory, Factory Side",0,Bandit's Bow,,58
@@ -69,3 +69,22 @@
 68,600AD,Guardia,Cursed Woods,0,Mid-Potion,,75
 69,600AD,Guardia,Cursed Woods,0,Shelter,,76
 70,600AD,Guardia,"Cursed Woods, Frog's Cave",0,Magic Scarf,,77
+71,600AD,Guardia,Denadoro Mountains,0,300 G,,79
+72,600AD,Guardia,Denadoro Mountains,0,Athenian Water,,80
+73,600AD,Guardia,Denadoro Mountains,0,Ether,,81
+74,600AD,Guardia,Denadoro Mountains,0,Mirage Hand,,82
+75,600AD,Guardia,Denadoro Mountains,0,500 G,,83
+76,600AD,Guardia,Denadoro Mountains,0,Athenian Water,,84
+77,600AD,Guardia,Denadoro Mountains,0,Golden Helm,,85
+78,600AD,Guardia,Denadoro Mountains,0,Mid-Potion,,86
+79,600AD,Guardia,Denadoro Mountains,0,Mid-Ether,,87
+80,600AD,Guardia,Denadoro Mountains,0,Mid-Ether,,88
+81,600AD,Guardia,Denadoro Mountains,0,600 G,,89
+82,600AD,Guardia,Denadoro Mountains,0,300 G,,90
+83,600AD,Guardia,Denadoro Mountains,0,Silver Earring,,91
+84,600AD,Guardia,Denadoro Mountains,0,Mid-Potion,,92
+85,600AD,Guardia,Denadoro Mountains,0,Silver Stud,Fall down leftmost waterfall,93
+86,600AD,Guardia,Denadoro Mountains,0,Mid-Ether,,94
+87,600AD,Guardia,Denadoro Mountains,0,Mid-Ether,"Forgot to take a screenshot here, located just south of the save point in plain site. Remind myself to go back for the screenshot later.",96
+88,600AD,Guardia,Denadoro Mountains,0,Golden Suit,Difficult to see behind tree near broken ladder.,98
+89,600AD,Guardia,Denadoro Mountains,0,Shelter,,99
